@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Light Player</title>
+</head>
+
+<body>
+
+    <div class="outter-container">
+
+        <aside>
+            <h6>LIBRARY</h6>
+            <ul>
+                <li class=" menu-options" onclick="clickMenuOption(4, this);">
+                    <div class="ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-heart" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                        </svg>
+                    </div>
+
+                    <div class="text">
+                        <p>Loved</p>
+                    </div>
+                </li>
+                <li class=" menu-options" onclick="clickMenuOption(5, this);">
+                    <div class="ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                            <path
+                                d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+                            <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+                            <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+                        </svg>
+                    </div>
+
+                    <div class="text">
+                        <p>Song</p>
+                    </div>
+                </li>
+                <li class=" menu-options" onclick="clickMenuOption(6, this);">
+                    <div class="ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-play-btn" viewBox="0 0 16 16">
+                            <path
+                                d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                        </svg>
+                    </div>
+
+                    <div class="text">
+                        <p>Video</p>
+                    </div>
+                </li>
+            </ul>
+
+            <h6>VIDEO</h6>
+            <ul>
+                <li class=" menu-options" onclick="clickMenuOption(0, this);">
+                    <div class="ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-sliders" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z" />
+                        </svg>
+                    </div>
+
+                    <div class="text">
+                        <p>Tweaks</p>
+                    </div>
+                </li>
+                <li class=" menu-options" onclick="clickMenuOption(1, this);">
+                    <div class="ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-badge-cc" viewBox="0 0 16 16">
+                            <path
+                                d="M3.708 7.755c0-1.111.488-1.753 1.319-1.753.681 0 1.138.47 1.186 1.107H7.36V7c-.052-1.186-1.024-2-2.342-2C3.414 5 2.5 6.05 2.5 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114H6.213c-.048.615-.496 1.05-1.186 1.05-.84 0-1.319-.62-1.319-1.727v-.743zm6.14 0c0-1.111.488-1.753 1.318-1.753.682 0 1.139.47 1.187 1.107H13.5V7c-.053-1.186-1.024-2-2.342-2C9.554 5 8.64 6.05 8.64 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114h-1.147c-.048.615-.497 1.05-1.187 1.05-.839 0-1.318-.62-1.318-1.727v-.743z" />
+                            <path
+                                d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z" />
+                        </svg>
+                    </div>
+
+                    <div class="text">
+                        <p>Caption</p>
+                    </div>
+                </li>
+                <li class=" menu-options" onclick="clickMenuOption(2, this);">
+                    <div class="ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-speedometer2" viewBox="0 0 16 16">
+                            <path
+                                d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z" />
+                            <path fill-rule="evenodd"
+                                d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z" />
+                        </svg>
+                    </div>
+
+                    <div class="text">
+                        <p>Speed</p>
+                    </div>
+                </li>
+            </ul>
+            <h6>AUDIO</h6>
+            <ul>
+                <li class=" menu-options" onclick="clickMenuOption(3, this);">
+                    <div class="ico">
+                        <svg style="transform: rotate(90deg);" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            fill="currentColor" class="bi bi-text-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </div>
+
+                    <div class="text">
+                        <p>Equalize</p>
+                    </div>
+                </li>
+                <li class=" menu-options">
+                    <div class="ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-lightning" viewBox="0 0 16 16">
+                            <path
+                                d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5zM6.374 1 4.168 8.5H7.5a.5.5 0 0 1 .478.647L6.78 13.04 11.478 7H8a.5.5 0 0 1-.474-.658L9.306 1H6.374z" />
+                        </svg>
+                    </div>
+
+                    <div class="text">
+                        <p>Boost</p>
+                    </div>
+                </li>
+                <li class=" menu-options">
+                    <div class="ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-file-arrow-down" viewBox="0 0 16 16">
+                            <path
+                                d="M8 5a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5A.5.5 0 0 1 8 5z" />
+                            <path
+                                d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                        </svg>
+                    </div>
+
+                    <div class="text">
+                        <p>Save</p>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+
+        <main>
+
+            <section class="top">
+
+                <div class="headings">
+                    <h6>Local</h6>
+                    <h1>Recent Plays</h1>
+                </div>
+
+                <div class="controls">
+                    <div class="block vol">
+                        <div class="container">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-volume-off-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M10.717 3.55A.5.5 0 0 1 11 4v8a.5.5 0 0 1-.812.39L7.825 10.5H5.5A.5.5 0 0 1 5 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-volume-mute-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z" />
+                            </svg>
+
+                            <input oninput="setVolume(this);" id="top-vol-input" type="range" min="10" max="100" value="90">
+                        </div>
+                    </div>
+                    <div onclick="loopOnOff(this);" id="loop-btn" class="block">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                            class="bi bi-infinity" viewBox="0 0 16 16">
+                            <path
+                                d="M5.68 5.792 7.345 7.75 5.681 9.708a2.75 2.75 0 1 1 0-3.916ZM8 6.978 6.416 5.113l-.014-.015a3.75 3.75 0 1 0 0 5.304l.014-.015L8 8.522l1.584 1.865.014.015a3.75 3.75 0 1 0 0-5.304l-.014.015L8 6.978Zm.656.772 1.663-1.958a2.75 2.75 0 1 1 0 3.916L8.656 7.75Z" />
+                        </svg>
+                    </div>
+                    <div class="block red" id="top-play-btn">
+                        <svg style="transform: translateX(1.6px);" xmlns="http://www.w3.org/2000/svg" width="30"
+                            height="30" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                        </svg>
+                    </div>
+                </div>
+            </section>
+            <section class="middle">
+
+                <div class="view-space">
+
+                    <section>
+
+                        <div class="black-container hide-controls" id="black-container">
+
+                            <div class="wrapper">
+
+                                <video type="video/*; codecs=hvc1"onclick="playPauseStream();" id="input-video" style="--fluid-height: 200px"></video>
+                            </div>
+
+                            <div class="play-logo">
+                                <svg style="transform: translate(4.5px);" xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                                  </svg>
+                            </div>
+                            <div class="pause-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-pause-fill" viewBox="0 0 16 16">
+                                    <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                  </svg>
+                            </div>
+                            <div class="left-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+                                  </svg>
+                            </div>
+                            <div class="right-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                                  </svg>
+                            </div>
+
+                            <div class="controls-top">
+
+                                <div class="block" onclick="asideToggle();">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                        class="bi bi-three-dots" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                                    </svg>
+                                </div>
+
+                                <div class="block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                        class="bi bi-badge-cc" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.708 7.755c0-1.111.488-1.753 1.319-1.753.681 0 1.138.47 1.186 1.107H7.36V7c-.052-1.186-1.024-2-2.342-2C3.414 5 2.5 6.05 2.5 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114H6.213c-.048.615-.496 1.05-1.186 1.05-.84 0-1.319-.62-1.319-1.727v-.743zm6.14 0c0-1.111.488-1.753 1.318-1.753.682 0 1.139.47 1.187 1.107H13.5V7c-.053-1.186-1.024-2-2.342-2C9.554 5 8.64 6.05 8.64 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114h-1.147c-.048.615-.497 1.05-1.187 1.05-.839 0-1.318-.62-1.318-1.727v-.743z" />
+                                        <path
+                                            d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="controls-bottom">
+
+                                <div id="video-progress" class="seek-bar" style="--progress: 0;">
+
+                                    <div class="bar"></div>
+                                </div>
+
+                                <div class="left">
+
+                                    <div class="btn">
+
+                                        <svg style="transform: rotate(-90deg);" xmlns="http://www.w3.org/2000/svg"
+                                            width="22" height="22" fill="currentColor" class="bi bi-chevron-bar-up"
+                                            viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708zM2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4z" />
+                                        </svg>
+                                    </div>
+
+                                    <div id="video-play-btn" class="btn double active" onclick="playPauseStream();">
+
+                                        <svg style="transform: translateX(2px);" xmlns="http://www.w3.org/ 2000/svg"
+                                            width="30" height="30" fill="currentColor" class="bi bi-play"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" />
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16">
+                                            <path
+                                                d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="btn">
+
+                                        <svg style="transform: rotate(90deg);" xmlns="http://www.w3.org/2000/svg"
+                                            width="22" height="22" fill="currentColor" class="bi bi-chevron-bar-up"
+                                            viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708zM2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4z" />
+                                        </svg>
+                                    </div>
+
+                                    <div id="videoMuteBtn" class="vol" onclick="muteUnmute();">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-volume-off-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M10.717 3.55A.5.5 0 0 1 11 4v8a.5.5 0 0 1-.812.39L7.825 10.5H5.5A.5.5 0 0 1 5 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z" />
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-volume-mute-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z" />
+                                        </svg>
+
+                                    </div>
+                                    <input oninput="setVolume(this);" id="video-vol-slider" type="range" min="10" max="100" value="90">
+
+                                    <div id="video-time" class="time">
+                                        <p>02:03 / 03:09</p>
+                                    </div>
+                                </div>
+
+                                <div class="right">
+
+                                    <div class="btn double" id="fullscreen-btn" onclick="maxFullscreen();">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            fill="currentColor" class="bi bi-fullscreen" viewBox="0 0 16 16">
+                                            <path
+                                                d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-tweaks hidden">
+
+                                <section class="tweaks" style="display: none;">
+
+                                    <h2>Adjustments</h2>
+
+                                    <div class="close-btn" onclick="hideTweaksContainer();">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                          </svg>
+                                    </div>
+
+                                    <div class="row">
+                                        <p class="label">Brightness</p>    
+                                        <input oninput="tweakVideo(0, this.value);" type="range" min="0" max="200">
+                                        <p class="video-tweak-value">100</p>
+                                    </div>
+                                    <div class="row">
+                                        <p class="label">Contrast</p>    
+                                        <input oninput="tweakVideo(1, this.value);" type="range" name="" id="" min="0" max="200">
+                                        <p class="video-tweak-value">100</p>
+                                    </div>
+                                    <div class="row">
+                                        <p class="label">Saturation</p>    
+                                        <input oninput="tweakVideo(2, this.value);" type="range" name="" id="" min="0" max="200">
+                                        <p class="video-tweak-value">100</p>
+                                    </div>
+                                    <div class="row">
+                                        <p class="label">Hue</p>    
+                                        <input oninput="tweakVideo(3, this.value);" type="range" name="" id="" min="0" max="360" value="0">
+                                        <p class="video-tweak-value">0 deg</p>
+                                    </div>
+                                </section>
+
+                                <section class="tweaks" style="display: none;">
+
+                                    <h2>Subtitle</h2>
+
+                                    <div class="close-btn" onclick="hideTweaksContainer();">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                          </svg>
+                                    </div>
+                                </section>
+
+                                <section class="tweaks" style="display: none;">
+
+                                    <h2>Playback speed</h2>
+
+                                    <div class="close-btn" onclick="hideTweaksContainer();">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                          </svg>
+                                    </div>
+
+                                    <div class="row">
+                                        <p class="label">Speed</p>    
+                                        <input oninput="setPlaybackSpeed(this.value);" type="range" name="" id="" min="0.5" max="2.0" step="0.5" value="1.0">
+                                        <p id="playback-speed-value" class="value">1x</p>
+                                    </div>
+                                </section>
+
+                                <section class="tweaks" style="display: none;">
+
+                                    <h2>Equalizer</h2>
+
+                                    <div class="close-btn" onclick="hideTweaksContainer();">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                          </svg>
+                                    </div>
+
+                                    <div class="eq">
+                                        <div class="column">
+                                            <p class="value eq-slider-value">0</p>
+                                            <input class="eq-slider" data-index="0" type="range" min="-50" max="36" value="0">
+                                            <p class="range">90 HZ</p>
+                                        </div>
+                                        <div class="column">
+                                            <p class="value eq-slider-value">0</p>
+                                            <input class="eq-slider" data-index="1" type="range" min="-50" max="36" value="0">
+                                            <p class="range">250 HZ</p>
+                                        </div>
+                                        <div class="column">
+                                            <p class="value eq-slider-value">0</p>
+                                            <input class="eq-slider" data-index="2" type="range" min="-50" max="36" value="0">
+                                            <p class="range">500 HZ</p>
+                                        </div>
+                                        <div class="column">
+                                            <p class="value eq-slider-value">0</p>
+                                            <input class="eq-slider" data-index="3" type="range" min="-50" max="36" value="0">
+                                            <p class="range">1500 HZ</p>
+                                        </div>
+                                        <div class="column">
+                                            <p class="value eq-slider-value">0</p>
+                                            <input class="eq-slider" data-index="4" type="range" min="-50" max="36" value="0">
+                                            <p class="range">3000 HZ</p>
+                                        </div>
+                                        <div class="column">
+                                            <p class="value eq-slider-value">0</p>
+                                            <input class="eq-slider" data-index="5" type="range" min="-50" max="36" value="0">
+                                            <p class="range">5000 HZ</p>
+                                        </div>
+                                        <div class="column">
+                                            <p class="value eq-slider-value">0</p>
+                                            <input class="eq-slider" data-index="6" type="range" min="-50" max="36" value="0">
+                                            <p class="range">8000 HZ</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+
+                        <div class="file-options">
+
+                            <div class="block" onclick="triggerUpload();">
+
+                                <div class="container">
+
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z" />
+                                        </svg>
+                                    </div>
+                                    <p>Open Files</p>
+                                </div>
+                            </div>
+                            <div class="block">
+
+                                <div class="container">
+
+                                    <div class="ico">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                        </svg>
+                                    </div>
+                                    <p>Clear List</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="track-list">
+                    <div class="list-container">
+
+                        <div class="row">
+
+                            <div class="thumb"></div>
+
+                            <div class="about">
+                                <div>Track Name is too long</div>
+                                <div>Description</div>
+                            </div>
+
+                            <div class="funcs">
+
+                                <div class="func time">
+                                    <p>01:03</p>
+                                </div>
+
+                                <div class="func">
+                                    <svg style="transform: translateY(2.3px);" xmlns="http://www.w3.org/2000/svg"
+                                        width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="thumb"></div>
+
+                            <div class="about">
+                                <div>Track Name is too long</div>
+                                <div>Description</div>
+                            </div>
+
+                            <div class="funcs">
+
+                                <div class="func time">
+                                    <p>01:03</p>
+                                </div>
+
+                                <div class="func">
+                                    <svg style="transform: translateY(2.3px);" xmlns="http://www.w3.org/2000/svg"
+                                        width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="thumb"></div>
+
+                            <div class="about">
+                                <div>Track Name is too long</div>
+                                <div>Description</div>
+                            </div>
+
+                            <div class="funcs">
+
+                                <div class="func time">
+                                    <p>01:03</p>
+                                </div>
+
+                                <div class="func">
+                                    <svg style="transform: translateY(2.3px);" xmlns="http://www.w3.org/2000/svg"
+                                        width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="thumb"></div>
+
+                            <div class="about">
+                                <div>Track Name is too long</div>
+                                <div>Description</div>
+                            </div>
+
+                            <div class="funcs">
+
+                                <div class="func time">
+                                    <p>01:03</p>
+                                </div>
+
+                                <div class="func">
+                                    <svg style="transform: translateY(2.3px);" xmlns="http://www.w3.org/2000/svg"
+                                        width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="thumb"></div>
+
+                            <div class="about">
+                                <div>Track Name is too long</div>
+                                <div>Description</div>
+                            </div>
+
+                            <div class="funcs">
+
+                                <div class="func time">
+                                    <p>01:03</p>
+                                </div>
+
+                                <div class="func">
+                                    <svg style="transform: translateY(2.3px);" xmlns="http://www.w3.org/2000/svg"
+                                        width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="thumb"></div>
+
+                            <div class="about">
+                                <div>Track Name is too long</div>
+                                <div>Description</div>
+                            </div>
+
+                            <div class="funcs">
+
+                                <div class="func time">
+                                    <p>01:03</p>
+                                </div>
+
+                                <div class="func">
+                                    <svg style="transform: translateY(2.3px);" xmlns="http://www.w3.org/2000/svg"
+                                        width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="thumb"></div>
+
+                            <div class="about">
+                                <div>Track Name is too long</div>
+                                <div>Description</div>
+                            </div>
+
+                            <div class="funcs">
+
+                                <div class="func time">
+                                    <p>01:03</p>
+                                </div>
+
+                                <div class="func">
+                                    <svg style="transform: translateY(2.3px);" xmlns="http://www.w3.org/2000/svg"
+                                        width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="thumb"></div>
+
+                            <div class="about">
+                                <div>Track Name is too long</div>
+                                <div>Description</div>
+                            </div>
+
+                            <div class="funcs">
+
+                                <div class="func time">
+                                    <p>01:03</p>
+                                </div>
+
+                                <div class="func">
+                                    <svg style="transform: translateY(2.3px);" xmlns="http://www.w3.org/2000/svg"
+                                        width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="thumb"></div>
+
+                            <div class="about">
+                                <div>Track Name is too long</div>
+                                <div>Description</div>
+                            </div>
+
+                            <div class="funcs">
+
+                                <div class="func time">
+                                    <p>01:03</p>
+                                </div>
+
+                                <div class="func">
+                                    <svg style="transform: translateY(2.3px);" xmlns="http://www.w3.org/2000/svg"
+                                        width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bottom"></section>
+
+        </main>
+
+        <div class="bottom-play-bar">
+
+            <div id="botom-seek" class="seek-bar">
+                <div id="botom-seek-bar" class="bar"></div>
+            </div>
+
+            <div class="about-track">
+                <div class="album-art"></div>
+                <div class="about">
+                    <div class="track-title">Phenomenon | Unknown Brain</div>
+                    <div class="track-desc">Brain Dead</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="btn-single">
+                    <svg style="transform: rotate(-90deg);" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                        fill="currentColor" class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708zM2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4z" />
+                    </svg>
+                </div>
+
+                <div onclick="playPauseStream();" id="bottom-play-btn" class="btn-double paused">
+
+                    <svg style="transform: translateX(2px);" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                        fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                        <path
+                            d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" />
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-pause" viewBox="0 0 16 16">
+                        <path
+                            d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                </div>
+
+                <div class="btn-single">
+                    <svg style="transform: rotate(90deg);" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                        fill="currentColor" class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708zM2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4z" />
+                    </svg>
+                </div>
+            </div>
+
+            <div id="bottom-time" class="time">
+                <p>02:45 / 03:30</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
